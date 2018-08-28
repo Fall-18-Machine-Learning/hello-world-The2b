@@ -1,0 +1,26 @@
+COMPILATION:
+	Under an x86 or x86_64 processor with Linux libraries, the program with the appropriate target-triplet (or duet, in this case) can be run as is. Otherwise, gcc can compile it, assuming you have some sort of standard C library installed, such as glibc. Honestly, I'm not sure you can load a shell, init, or even the kernel without these libraries. Due to the size of this project (or more accurately, the lack there-of), neither make nor autoconf are used in this process. Instead, do the following to compile and run the program under Linux:
+		* Open a shell
+		* Navigate to the source folder
+		* Execute the following command: "gcc -o hello-world hello-world.c"
+		* Execute the following command: "sudo chmod +x hello-world"
+		* Execute the following command: "./hello-world"
+
+	The same can be said for Mac OSX, to my knowledge. That being said, I do not own any Mac OSX devices, not do I have any images which I can use to test the program. However, I do not think the deviation between OSX and Linux is so wide that a Hello World binary would not be able to be compiled under Mac.
+		* Open a shell
+		* Navigate to the source folder
+		* Execute the following command: "gcc -o hello-world hello-world.c"
+		* Execute the following command: "sudo chmod +x hello-world"
+		* Execute the following command: "./hello-world"
+
+	For Windows, the program can be compiled with a variety of programs. If you do not have a C compiler, you can use Visual Studio Express (http://www.microsoft.com/express/Downloads/#2010-Visual-CPP) for a graphical interface, or MinGW if you prefer a CLI.
+		For MinGW, follow the following instructions
+		* Open a shell
+		* Navigate to the source folder
+		* Execute the following command: "gcc -o hello-world.exe hello-world.c"
+		* Execute the following command: "hello-world.exe"
+
+		For Visual Studio Express, follow the following instructions:
+		* Create a new project
+		* Import the source file
+		* Click "Run"
